@@ -14,14 +14,14 @@ const userSchema = mongoose.Schema(
       trim: true,
       match: [
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-        "Please enter a valid emaial",
+        "Please enter a valid email",
       ],
     },
     password: {
       type: String,
       required: [true, "Please add a password"],
       minLength: [6, "Password must be up to 6 characters"],
-      //   maxLength: [23, "Password must not be more than 23 characters"],
+      //maxLength: [23, "Password must not be more than 23 characters"],
     },
     photo: {
       type: String,
@@ -30,7 +30,7 @@ const userSchema = mongoose.Schema(
     },
     phone: {
       type: String,
-      default: "+234",
+      default: "+977",
     },
     bio: {
       type: String,
